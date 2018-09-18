@@ -1,0 +1,13 @@
+{
+  "variables" : {
+    "draft"   : "yes",
+    "title"   : "EDK II Module Writer's Guide",
+    "version" : "Revision 0.7"
+  },
+
+  "plugins": ["puml"],
+  "pluginsConfig": {},
+  "pdf":{
+	"fontSize"	:22
+  }
+}
