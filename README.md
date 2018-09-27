@@ -46,7 +46,7 @@
 {% endif %}
 
 
-### Acknowledgements
+### Acknowledgments
 
 Redistribution and use in source (original document form) and 'compiled'
 forms (converted to PDF, epub, HTML and other formats) with or without
@@ -85,4 +85,4 @@ Copyright (c) 2009 - 2010, Intel Corporation. All rights reserved.
 |                   | PI_SPECIFICATION_VERSION/UEFI_SPECIFICATION_VERSI ON in module's INF |                 |
 |                   | Add UEFI_HII_RESOURCE_SECTION usage in INF's [Defines] section       |                 |
 |                   | Add a limitation of dynamic PCD usage                                |                 |
-
+| 0.71              | Convert to GitBook                                                   | September 2018  |
