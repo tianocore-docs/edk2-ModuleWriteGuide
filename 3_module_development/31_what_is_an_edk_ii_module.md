@@ -78,6 +78,8 @@ EDK II defines many module types. The module type is used to:
   example, a PEIM/DXE_DRIVER type module can have "depex" section in .efi
   binary image; a UEFI_DRIVER can have .ui or .ver section in .efi binary image;
 
+* Indicate EntryPoint() or Constructor() API for different types of modules.
+
 * Indicate the suitable library instance for different types of modules. A
   library instance will point out what module types are supported in INF file.
 

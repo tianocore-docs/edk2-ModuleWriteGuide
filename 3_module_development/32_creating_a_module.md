@@ -197,6 +197,11 @@ instance:
   DebugLib
 ```
 
+Note: if the library supports the cross module types PEIM, UEFI_DIRVER, DXE_DRIVER.
+Its module type can be PEIM or UEFI_DRIVER or DXE_DRIVER. If it has the library
+constructor, its module type must be BASE. BASE type library constructor has no
+input parameter that can link to any driver type.
+
 ### 3.2.3 Adding a Package Dependency
 
 The [Packages] section of the INF file describes all packages dependencies of
