@@ -71,7 +71,7 @@ file as EFI_PE_SECTION:
 EDK II defines many module types. The module type is used to:
 
 * Indicate the lifecycle for different types of modules. For example, PEIM is
-  dispatched in PEI phase and DXE_DRIVER orUEFI_DRIVER is dispatched at DXE
+  dispatched in PEI phase and DXE_DRIVER or UEFI_DRIVER is dispatched at DXE
   phase;
 
 * Indicate the binary image generation for different types of modules. For
