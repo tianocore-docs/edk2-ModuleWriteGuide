@@ -1,0 +1,1479 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.2 Creating a Module · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="33_additional_steps_for_library_instances.html" />
+    
+    
+    <link rel="prev" href="31_what_is_an_edk_ii_module.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-module-writers-guide">
+            
+                    
+                    EDK II Module Writer's Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../TABLES.html">
+            
+                <a href="../TABLES.html#tables">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../FIGURES.html">
+            
+                <a href="../FIGURES.html#figures">
+            
+                    
+                    Figures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../1_the_basics_of_edk_ii/">
+            
+                <a href="../1_the_basics_of_edk_ii/#1-the-basics-of-edk-ii">
+            
+                    
+                    1 The Basics of EDK II
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../1_the_basics_of_edk_ii/11_overview.html">
+            
+                <a href="../1_the_basics_of_edk_ii/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../1_the_basics_of_edk_ii/12_related_references.html">
+            
+                <a href="../1_the_basics_of_edk_ii/12_related_references.html#12-related-references">
+            
+                    
+                    1.2 Related References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../1_the_basics_of_edk_ii/13_terms.html">
+            
+                <a href="../1_the_basics_of_edk_ii/13_terms.html#13-terms">
+            
+                    
+                    1.3 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../1_the_basics_of_edk_ii/14_target_audience.html">
+            
+                <a href="../1_the_basics_of_edk_ii/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../2_an_edk_ii_package/">
+            
+                <a href="../2_an_edk_ii_package/#2-an-edk-ii-package">
+            
+                    
+                    2 An EDK II Package
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../2_an_edk_ii_package/21_introduction.html">
+            
+                <a href="../2_an_edk_ii_package/21_introduction.html#21-introduction">
+            
+                    
+                    2.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../2_an_edk_ii_package/22_manage_package.html">
+            
+                <a href="../2_an_edk_ii_package/22_manage_package.html#22-manage-package">
+            
+                    
+                    2.2 Manage Package
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./#3-module-development">
+            
+                    
+                    3 Module Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="31_what_is_an_edk_ii_module.html">
+            
+                <a href="31_what_is_an_edk_ii_module.html#31-what-is-an-edk-ii-module">
+            
+                    
+                    3.1 What is an EDK II module?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="32_creating_a_module.html">
+            
+                <a href="32_creating_a_module.html#32-creating-a-module">
+            
+                    
+                    3.2 Creating a Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="33_additional_steps_for_library_instances.html">
+            
+                <a href="33_additional_steps_for_library_instances.html#33-additional-steps-for-library-instances">
+            
+                    
+                    3.3 Additional Steps for Library Instances
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="34_additional_steps_for_driver.html">
+            
+                <a href="34_additional_steps_for_driver.html#34-additional-steps-for-driver">
+            
+                    
+                    3.4 Additional Steps for Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="35_edk_ii_common_library_class.html">
+            
+                <a href="35_edk_ii_common_library_class.html#35-edk-ii-common-library-class">
+            
+                    
+                    3.5 EDK II Common Library Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="36_module_using_hii.html">
+            
+                <a href="36_module_using_hii.html#36-module-using-hii">
+            
+                    
+                    3.6 Module using HII
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="37_building_the_module.html">
+            
+                <a href="37_building_the_module.html#37-building-the-module">
+            
+                    
+                    3.7 Building the module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="38_debugging_a_module.html">
+            
+                <a href="38_debugging_a_module.html#38-debugging-a-module">
+            
+                    
+                    3.8 Debugging a Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../4_uefi_applications/">
+            
+                <a href="../4_uefi_applications/#4-uefi-applications">
+            
+                    
+                    4 UEFI Applications
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../4_uefi_applications/41_begin_with_inf_file.html">
+            
+                <a href="../4_uefi_applications/41_begin_with_inf_file.html#41-begin-with-inf-file">
+            
+                    
+                    4.1 Begin with INF file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../4_uefi_applications/42_write_uefi_application_entry_point.html">
+            
+                <a href="../4_uefi_applications/42_write_uefi_application_entry_point.html#42-write-uefi-application-entry-point">
+            
+                    
+                    4.2 Write UEFI Application Entry Point
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../4_uefi_applications/43_get_service_tables.html">
+            
+                <a href="../4_uefi_applications/43_get_service_tables.html#43-get-service-tables">
+            
+                    
+                    4.3 Get Service Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../4_uefi_applications/44_communicating_with_a_uefi_driver.html">
+            
+                <a href="../4_uefi_applications/44_communicating_with_a_uefi_driver.html#44-communicating-with-a-uefi-driver">
+            
+                    
+                    4.4 Communicating with a UEFI driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../5_uefi_drivers/">
+            
+                <a href="../5_uefi_drivers/#5-uefi-drivers">
+            
+                    
+                    5 UEFI Drivers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../5_uefi_drivers/51_begin_with_inf_file.html">
+            
+                <a href="../5_uefi_drivers/51_begin_with_inf_file.html#51-begin-with-inf-file">
+            
+                    
+                    5.1 Begin With INF File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../5_uefi_drivers/52_write_the_uefi_driver_entry_point.html">
+            
+                <a href="../5_uefi_drivers/52_write_the_uefi_driver_entry_point.html#52-write-the-uefi-driver-entry-point">
+            
+                    
+                    5.2 Write the UEFI Driver entry point
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../5_uefi_drivers/53_get_service_tables.html">
+            
+                <a href="../5_uefi_drivers/53_get_service_tables.html#53-get-service-tables">
+            
+                    
+                    5.3 Get Service Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../5_uefi_drivers/54_communication_between_uefi_drivers.html">
+            
+                <a href="../5_uefi_drivers/54_communication_between_uefi_drivers.html#54-communication-between-uefi-drivers">
+            
+                    
+                    5.4 Communication between UEFI Drivers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../6_sec_module/">
+            
+                <a href="../6_sec_module/#6-sec-module">
+            
+                    
+                    6 SEC Module
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../6_sec_module/61_beginning_to_write_the_inf_file.html">
+            
+                <a href="../6_sec_module/61_beginning_to_write_the_inf_file.html#61-beginning-to-write-the-inf-file">
+            
+                    
+                    6.1 Beginning to Write the INF File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../6_sec_module/62_setup_pre-memory_environment.html">
+            
+                <a href="../6_sec_module/62_setup_pre-memory_environment.html#62-setup-pre-memory-environment">
+            
+                    
+                    6.2 Setup Pre-Memory Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../6_sec_module/63_prepare_for_data_pei_foundation.html">
+            
+                <a href="../6_sec_module/63_prepare_for_data_pei_foundation.html#63-prepare-for-data-pei-foundation">
+            
+                    
+                    6.3 Prepare for Data PEI Foundation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../7_pre-efi_initialization_modules/">
+            
+                <a href="../7_pre-efi_initialization_modules/#7-pre-efi-initialization-modules">
+            
+                    
+                    7 Pre-EFI Initialization Modules
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../7_pre-efi_initialization_modules/71_introduction.html">
+            
+                <a href="../7_pre-efi_initialization_modules/71_introduction.html#71-introduction">
+            
+                    
+                    7.1 Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../7_pre-efi_initialization_modules/72_beginning_to_write_a_peim_inf_file.html">
+            
+                <a href="../7_pre-efi_initialization_modules/72_beginning_to_write_a_peim_inf_file.html#72-beginning-to-write-a-peim-inf-file">
+            
+                    
+                    7.2 Beginning to Write a PEIM INF File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../7_pre-efi_initialization_modules/73_defining_a_peims_entry_point.html">
+            
+                <a href="../7_pre-efi_initialization_modules/73_defining_a_peims_entry_point.html#73-defining-a-peims-entry-point">
+            
+                    
+                    7.3 Defining a PEIM's entry point
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../7_pre-efi_initialization_modules/74_get_pei_services.html">
+            
+                <a href="../7_pre-efi_initialization_modules/74_get_pei_services.html#74-get-pei-services">
+            
+                    
+                    7.4 Get Pei Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../7_pre-efi_initialization_modules/75_communicate_between_peim_modules.html">
+            
+                <a href="../7_pre-efi_initialization_modules/75_communicate_between_peim_modules.html#75-communicate-between-peim-modules">
+            
+                    
+                    7.5 Communicate between PEIM Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../7_pre-efi_initialization_modules/76_communicate_with_dxe_modules.html">
+            
+                <a href="../7_pre-efi_initialization_modules/76_communicate_with_dxe_modules.html#76-communicate-with-dxe-modules">
+            
+                    
+                    7.6 Communicate with DXE Modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../7_pre-efi_initialization_modules/77_boot_mode.html">
+            
+                <a href="../7_pre-efi_initialization_modules/77_boot_mode.html#77-boot-mode">
+            
+                    
+                    7.7 Boot Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../7_pre-efi_initialization_modules/78_execution_in_place_peims.html">
+            
+                <a href="../7_pre-efi_initialization_modules/78_execution_in_place_peims.html#78-execution-in-place-peims">
+            
+                    
+                    7.8 Execution in Place PEIMs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../7_pre-efi_initialization_modules/79_dependency_for_peims.html">
+            
+                <a href="../7_pre-efi_initialization_modules/79_dependency_for_peims.html#79-dependency-for-peims">
+            
+                    
+                    7.9 Dependency for PEIMs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../8_dxe_drivers_non-uefi_drivers/">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/#8-dxe-drivers-non-uefi-drivers">
+            
+                    
+                    8 DXE Drivers: non-UEFI drivers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../8_dxe_drivers_non-uefi_drivers/81_beginning_with_inf_file.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/81_beginning_with_inf_file.html#81-beginning-with-inf-file">
+            
+                    
+                    8.1 Beginning with INF File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../8_dxe_drivers_non-uefi_drivers/82_write_dxe_driver_entry_point.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/82_write_dxe_driver_entry_point.html#82-write-dxe-driver-entry-point">
+            
+                    
+                    8.2 Write DXE Driver Entry Point
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../8_dxe_drivers_non-uefi_drivers/83_obtaining_services_tables.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/83_obtaining_services_tables.html#83-obtaining-services-tables">
+            
+                    
+                    8.3 Obtaining Services Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../8_dxe_drivers_non-uefi_drivers/84_communication_between_dxe_drivers.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/84_communication_between_dxe_drivers.html#84-communication-between-dxe-drivers">
+            
+                    
+                    8.4 Communication between DXE Drivers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../8_dxe_drivers_non-uefi_drivers/85_communication_with_peims.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/85_communication_with_peims.html#85-communication-with-peims">
+            
+                    
+                    8.5 Communication with PEIMs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../8_dxe_drivers_non-uefi_drivers/86_dependency_expressions.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/86_dependency_expressions.html#86-dependency-expressions">
+            
+                    
+                    8.6 Dependency Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../8_dxe_drivers_non-uefi_drivers/87_handler_for_evtsignal_exit_boot_services.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/87_handler_for_evtsignal_exit_boot_services.html#87-handler-for-evt_signal_exit_boot_services">
+            
+                    
+                    8.7 Handler for EVT_SIGNAL_EXIT_BOOT_SERVICES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../8_dxe_drivers_non-uefi_drivers/88_dxe_runtime_driver.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/88_dxe_runtime_driver.html#88-dxe-runtime-driver">
+            
+                    
+                    8.8 DXE Runtime Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../8_dxe_drivers_non-uefi_drivers/89_dxe_sal_driver.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/89_dxe_sal_driver.html#89-dxe-sal-driver">
+            
+                    
+                    8.9 DXE SAL Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="../8_dxe_drivers_non-uefi_drivers/810_dxe_smm_driver.html">
+            
+                <a href="../8_dxe_drivers_non-uefi_drivers/810_dxe_smm_driver.html#810-dxe-smm-driver">
+            
+                    
+                    8.10 DXE SMM Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../appendix_a_dynamic_pcd.html">
+            
+                <a href="../appendix_a_dynamic_pcd.html#appendix-a-dynamic-pcd">
+            
+                    
+                    Appendix A Dynamic PCD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.2 Creating a Module</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  3.2 Creating a Module
+
+  Copyright (c) 2010-2018, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="32-creating-a-module">3.2 Creating a Module</h2>
+<p>Driver and Library modules follows similar steps for creation:</p>
+<ol>
+<li><p>Create or select the package in which the module will be located.</p>
+</li>
+<li><p>Create a directory for the module and put the INF file in the directory.</p>
+</li>
+<li><p>Add package dependencies to the INF file.</p>
+</li>
+<li><p>Add PPI,.Protocol, Guid, PCD,or Library Class dependencies to the INF file.</p>
+</li>
+<li><p>Add [depex] section to the INF file if this module depends on a PPI,
+Protocol, or Guid and the module type supports this section.</p>
+</li>
+<li><p>Create source file(s) and add relative path of source file(s) to the INF file</p>
+</li>
+</ol>
+<h3 id="321-location">3.2.1 Location</h3>
+<p>A module is released and distributed within a package, so creating or selecting
+the appropriate package for the new module is the first step.</p>
+<h4 id="3211-choosing-the-package">3.2.1.1 Choosing the Package</h4>
+<p>A Package in EDK II is used to contain similar definitions and modules. The
+&quot;similar&quot; is recommended to be determined by following rules:</p>
+<p><strong>Industry standard</strong></p>
+<p>For example, MdePkg package contains the definitions from PIWG, UEFI, SMBIOS,
+USB, PCI, etc, which are all industry standards.</p>
+<p><strong>Similar technology</strong></p>
+<p>For example, OptionRomPkg groups the definitions and modules related to Option
+Rom technology.</p>
+<p><strong>Business reason</strong></p>
+<p>For example, IntelFrameworkPkg groups the definitions and modules for Intel
+framework implementation.</p>
+<p><strong>Platform</strong></p>
+<p>For example, Nt32Pkg groups the definitions and modules required by Nt32
+platform. In addition, a platform package also will provide a DSC and FDF file
+for platform building.</p>
+<p>At the beginning of developing a module, the module developers need to consider
+the purpose and release process for the module to select the appropriate
+package.</p>
+<hr>
+<p><strong>Note:</strong> The packages in
+<a href="https://edk2.tianocore.org/" target="_blank">https://edk2.tianocore.org</a> <em>are basic core
+packages.</em></p>
+<hr>
+<p><em>Generally, a new module should not be created in them.</em></p>
+<h4 id="3212-adding-a-module-directory">3.2.1.2 Adding a Module Directory</h4>
+<p>A module directory should be added to the proper package with the following
+recommendations:</p>
+<ul>
+<li><p>Put a library module to &quot;<code>&lt;Package Root Path&gt;</code>/Library&quot; directory.</p>
+</li>
+<li><p>Put PROTOCOL, PPI, GUID, or Library Class definitions in &quot;<code>&lt;Package Root Path&gt;</code>/Include/Protocol&quot; or &quot;<code>&lt;Package Root Path&gt;</code>/Include/Ppi&quot; or &quot;<code>&lt;Package Root Path&gt;</code>/Include/Guid&quot; or &quot;<code>&lt;Package Root Path&gt;</code>/Include/Library&quot; directory respectively.</p>
+</li>
+<li><p>Put a driver module in &quot;<code>&lt;Package Root Path&gt;</code>&quot; directory.</p>
+</li>
+<li><p>Put an application module in &quot;<code>&lt;Package Root Path&gt;</code>/Application&quot; directory &#xF0B7;
+Use recommend directory name for module as follows:</p>
+</li>
+</ul>
+<h6 id="table-2-recommended-name-convention-for-module-directory">Table 2 Recommended name convention for module directory</h6>
+<table>
+<thead>
+<tr>
+<th><code>Recommended directory name convention</code></th>
+<th><code>Module Type</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XxxPei</td>
+<td>PEIM, PEI_CORE</td>
+</tr>
+<tr>
+<td>XxxDxe</td>
+<td>DXE_DRIVER, UEFI_DRIVER</td>
+</tr>
+<tr>
+<td>XxxRuntimeDxe</td>
+<td>DXE_RUNTIME_DRIVER</td>
+</tr>
+<tr>
+<td>XxxxDxeSal</td>
+<td>DXE_SAL_DRIVER</td>
+</tr>
+<tr>
+<td>XxxxLib</td>
+<td>Library Instance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="322-sample-module-meta-file---inf">3.2.2 Sample: Module Meta File - INF</h3>
+<p>Each module requires a module INF file in the root directory of the module.</p>
+<p>A module is INF file (sometimes referred to as the module meta-file) includes
+the following items:</p>
+<ul>
+<li><p>The module&apos;s basic information, such as name, GUID, module type, etc.</p>
+</li>
+<li><p>The path to any packages the module is dependent on.</p>
+</li>
+<li><p>The path to binary files or source files included in the module.</p>
+</li>
+<li><p>A list of all interfaces required by the module, i.e. Protocol, Ppi, Guid.</p>
+</li>
+<li><p>A list of all PCDs and Library classes required by the module.</p>
+</li>
+<li><p>Others, such as dependency section depending on the module type.</p>
+</li>
+</ul>
+<h4 id="3221-example-application-module-inf">3.2.2.1 Example: Application Module INF</h4>
+<pre><code class="lang-ini">##
+[Defines]
+  INF_VERSION                = 0x00010005
+  BASE_NAME                  = HelloWorld
+  FILE_GUID                  = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+  MODULE_TYPE                = UEFI_APPLICATION
+  VERSION_STRING             = 1.0
+  UEFI_SPECIFICATION_VERSION = 0x0002001E
+  ENTRY_POINT                = UefiMain
+
+#
+# The following information is for reference only and not required by the
+# build tools.
+#
+# VALID_ARCHITECTURES = IA32 X64 IPF EBC
+#
+##
+[Sources.common]
+  HelloWorld.c
+
+##
+[Packages]
+  MdePkg/MdePkg.dec
+
+##
+[LibraryClasses]
+  UefiBootServicesTableLib
+  UefiApplicationEntryPoint
+  UefiLib
+  DebugLib
+</code></pre>
+<h4 id="3222-example-library-module-inf">3.2.2.2 Example: Library Module INF</h4>
+<p>Following is a sample INF file for PeiSevicesTablePointerLib.inf library
+instance:</p>
+<pre><code class="lang-ini">[Defines]
+  INF_VERSION    = 0x00010005
+  BASE_NAME      = PeiServicesTablePointerLib
+  FILE_GUID      = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+  MODULE_TYPE    = PEIM
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS  = PeiServicesTablePointerLib|PEIM
+  PEI_CORE SEC
+  CONSTRUCTOR    = PeiServicesTablePointerLibConstructor
+
+#
+# VALID_ARCHITECTURES = IA32 X64 IPF EBC (EBC is for build
+#only)
+#
+[Sources.common]
+  PeiServicesTablePointer.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  DebugLib
+</code></pre>
+<p>Note: if the library supports the cross module types PEIM, UEFI_DIRVER, DXE_DRIVER.
+Its module type can be PEIM or UEFI_DRIVER or DXE_DRIVER. If it has the library
+constructor, its module type must be BASE. BASE type library constructor has no
+input parameter that can link to any driver type.</p>
+<h3 id="323-adding-a-package-dependency">3.2.3 Adding a Package Dependency</h3>
+<p>The [Packages] section of the INF file describes all packages dependencies of
+this module. The EDK II relative path of dependent package DEC file is
+described in INF&apos;s [Packages] section as follows:</p>
+<pre><code class="lang-ini">[Packages]
+  MdePkg/MdePkg.dec
+  IntelFrameworkPkg/IntelFrameworkPkg.dec
+</code></pre>
+<hr>
+<p><strong>Note:</strong> The path is from the root of the $workspace, not from the module
+directory.</p>
+<hr>
+<p>A module should use the following rules for determining package dependency:</p>
+<ul>
+<li><p>The MdePkg package is required for all modules</p>
+</li>
+<li><p>If using definitions from Intel framework specification, dependency on the
+IntelFrameworkPkg is required.</p>
+</li>
+<li><p>Beyond the preceding rules, more package dependencies are introduced by
+referencing or using surface items, such as Protocol, Ppi, Guid, PCD, Library
+Class, etc. For example, if a module uses definitions or interfaces from the
+library class &quot;HiiLib&quot; that is defined in MdeModulePkg package, it would need
+to be dependent on the MdeModulePkg.</p>
+</li>
+</ul>
+<h3 id="324-adding-source-files">3.2.4 Adding Source Files</h3>
+<p>All module source code is described in the INF [sources] section, and is based
+on following rules:</p>
+<hr>
+<p><strong>Note:</strong> The UNIX-style path separator &quot;/&quot; should be used, not the
+Windows*-style &quot;\&quot;.</p>
+<hr>
+<p>&#xF0B7; Different architecture sources are put in different source sections.</p>
+<pre><code class="lang-ini">[Sources.common] # source in this section is suitable for all arch
+  CheckSum.c ...
+
+[Sources.Ia32] # source in this section is suitable for IA32 arch
+  Ia32/Wbinvd.c | MSFT ...
+  Ia32/WriteMm7.S | GCC ...
+
+[Sources.X64] # source in this section is suitable for X64 arch X64/Thunk16.asm ...
+
+[Sources.IPF] # source in this section is suitable for IPF arch Ipf/AsmCpuMisc.s ...
+
+[Sources.EBC] # source in this section is suitable for EBC arch Synchronization.c ...
+</code></pre>
+<ul>
+<li>Tool Tags are used describe the sources for different tool chains.</li>
+</ul>
+<pre><code class="lang-ini">[Sources.Ia32]
+  Ia32/Wbinvd.c | MSFT # source is built when MSFT tool is used ...
+  Ia32/WriteMm7.S | GCC # source is built when GCC tool is used ...
+  &quot;$(CC)&quot; -o ${dst} $(CC_FLAGS) $(INC) ${src}
+</code></pre>
+<ul>
+<li>All files should be put under the module&apos;s main folder. Do not use &quot;. /&quot; &#xF0B7;
+All C include files should also be listed in the sources section.</li>
+</ul>
+<h4 id="3241-supported-tool-tag">3.2.4.1 Supported Tool Tag</h4>
+<p>The following tool tag name is supported by edk2.</p>
+<h6 id="table-3-edk-ii-supported-file-extensions">Table 3 EDK II supported file extensions</h6>
+<table>
+<thead>
+<tr>
+<th><code>Tool Tag</code></th>
+<th><code>Description</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSFT</td>
+<td>Microsoft Family Tool Chain</td>
+</tr>
+<tr>
+<td>INTEL</td>
+<td>INTEL Tool Chain</td>
+</tr>
+<tr>
+<td>GCC</td>
+<td>GCC Tool Chain</td>
+</tr>
+</tbody>
+</table>
+<h3 id="325-add-library-class-references">3.2.5 Add Library Class References</h3>
+<p>The library class abstracts some macro or structure definitions and function
+declarations. The library instance, which is the implementation of a given
+library class, can be different for different platform or for different phases
+(SEC ,PEI, DXE) in one platform. Therefore, a module will be dependent on a
+library class for platform or phase specific behavior.</p>
+<p>The steps of using a library class in a module are:</p>
+<ol>
+<li><p>Add a dependency for the package containing the library class in INF file</p>
+</li>
+<li><p>Add a dependency for the library class in the INF file</p>
+</li>
+<li><p>Include the library class header file in source code.</p>
+</li>
+</ol>
+<p>To include the library class header in C source code use the following syntax:</p>
+<p><code>#include &lt;Library/OemHookStatusCodeLib.h&gt;</code></p>
+<p>The header including path is relative to the package&apos;s public include path,
+which is defined in the package (containing the library class, not necessarily
+the module) DEC&apos;s [include] section.</p>
+<hr>
+<p><strong>Note:</strong> Rememberr to use &quot;/&quot; for the path separator.</p>
+<hr>
+<h3 id="326-adding-pcd-references">3.2.6 Adding PCD References</h3>
+<p>MACRO and global variables are widely used to make modules customizable in
+different architectures and different platforms. The EDK II introduces the PCD
+concept to replace these methods. For example, a &quot;FeatureFlag&quot; type PCD is
+similar to a project MACRO in that some feature or functionality will be
+enabled if the PCD&apos;s value is TRUE, and vice versa.</p>
+<p>A PCD entry is defined by the PCD&apos;s Token Space Guid C name, followed by a
+period &quot;.&quot; character and the PCD&apos;s C name. In one PCD&apos;s token space, each PCD&apos;s
+C name is unique.</p>
+<pre><code class="lang-c">For example, <span class="hljs-keyword">for</span> PCD gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel, gEfiMdePkgTokenSpaceGuid is the token space name
+and PcdDebugPrintErrorLevel is the PCD name, and gEfiMdePkgTokenSpaceGuid is mapped to a GUID defined in MdePkg :
+gEfiMdePkgTokenSpaceGuid = { <span class="hljs-number">0x914AEBE7</span>, <span class="hljs-number">0x4635</span>, <span class="hljs-number">0x459b</span>, { <span class="hljs-number">0xAA</span>, <span class="hljs-number">0x1C</span>, <span class="hljs-number">0x11</span>, <span class="hljs-number">0xE2</span>, <span class="hljs-number">0x19</span>, <span class="hljs-number">0xB0</span>, <span class="hljs-number">0x3A</span>, <span class="hljs-number">0x10</span> }}
+</code></pre>
+<h4 id="3261-pcd-types">3.2.6.1 PCD Types</h4>
+<p>EDK II provides the following types of PCDs:</p>
+<p><strong>Feature flag type PCD</strong></p>
+<p>This PCD type replaces a switch MACRO to enable or disable a feature. This is a
+Boolean value, and is either TRUE or FALSE.</p>
+<p><strong>Fixed at build type PCD</strong></p>
+<p>This PCD type replaces a macro that produced a customizable value, such as the
+PCI Express base address. The value of this PCD type is determined at build
+time and is stored in the code section of a module&apos;s PE image.</p>
+<p><strong>Patchable in module type PCD</strong></p>
+<p>This PCD type is very similar to the fixed at build PCD type, but the value is
+stored in the data section, rather than the code section, of the module&apos;s PE
+image.</p>
+<p><strong>Dynamic type PCD</strong></p>
+<p>This PCD type is different from the other PCD types listed. The value is
+assigned by one module and is accessed by other modules in execution time. The
+PEIM PcdPeim and the DXE Driver PcdDXE each maintain a PCD database that
+contains all dynamic PCD information used by platform in their respective phase.</p>
+<h4 id="3262-add-the-package-dependency">3.2.6.2 Add the Package Dependency</h4>
+<p>When using a PCD in a module, package dependencies must be added to INF&apos;s
+[Packages] section. Two packages are required: the package containing the PCD
+being used, and the MdePkg. The MdePkg is required because the library class
+&quot;PcdLib&quot; in MdePkg provides PCD accessing functions and macros.</p>
+<h4 id="3263-adding-pcds-to-modules-inf-file">3.2.6.3 Adding PCDs to module&apos;s INF file</h4>
+<p>To reference a PCD entry, the token space guid name and PCD name must be added
+into the INF&apos;s [PCD] section:</p>
+<pre><code class="lang-ini">[PCD.common]
+  gEfiMdePkgTokenSpaceGuid.PcdMaximumLinkedListLength gEfiMdePkgTokenSpaceGuid.PcdMaximumAsciiStringLength gEfiMdePkgTokenSpaceGuid.PcdMaximumUnicodeStringLength
+</code></pre>
+<p>We recommended using a general type &quot;PCD&quot; in the module&apos;s INF, so that it
+allows platform integrators to choose any PCD type for different usage cases.
+For example, in a desktop platform, memory length can be designated as a
+&quot;Dynamic&quot; PCD, and its value is produced by the memory discovery driver.
+However, in some special embedded systems, memory length is designed as a
+&quot;FixedAtBuild&quot; type PCD, and its value is always fixed.</p>
+<p>There are limitations for selecting PCD types:</p>
+<p>&#xF0B7; If a PCD value is used as constant value such as array&apos;s length, this PCD&apos;s
+type should be &quot;FixedPcd&quot;. For example:</p>
+<p><code>UINT8 MySampleArray[FixedPcdGet16(PcdArrayLength)] = {0};</code></p>
+<hr>
+<p><strong>Note:</strong> Avoid using &quot;FixedPcd&quot; in the library instance modules, because the
+library instance can link to different modules, and the same PCD may have a
+different value in different modules.</p>
+<hr>
+<p><strong>Note:</strong> In a single module, avoid using two PCDs with same name but in
+different token spaces.</p>
+<hr>
+<h6 id="table-4-inf-pcd-section-name">Table 4 INF PCD Section Name</h6>
+<table>
+<thead>
+<tr>
+<th><code>PCD Type</code></th>
+<th><code>INF File Section Name</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General type that can be mapped in any PCD type</td>
+<td>PCD</td>
+</tr>
+<tr>
+<td>Feature Flag</td>
+<td>FeaturePcd</td>
+</tr>
+<tr>
+<td>Fixed At Build</td>
+<td>FixedPcd</td>
+</tr>
+<tr>
+<td>Patchable In Module</td>
+<td>PatchPcd</td>
+</tr>
+<tr>
+<td>Dynamic</td>
+<td>PCD</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3264-accessing-a-pcd-value-from-c-source-code">3.2.6.4 Accessing a PCD value from C source code</h4>
+<p>To obtain or set a PCD&apos;s value from source code, the following steps should be
+taken:</p>
+<ol>
+<li><p>Add the dependency for PcdLib to the module INF file.</p>
+</li>
+<li><p>Add the dependency for MdePkg.</p>
+</li>
+<li><p>Add the include for <code>&lt;Library/PcdLib.h&gt;</code> in source code.</p>
+</li>
+<li><p>Use the PcdLib interface to access the PCD&apos;s value.</p>
+</li>
+</ol>
+<h6 id="table-5-pcd-access-functions">Table 5 PCD access functions</h6>
+<table>
+<thead>
+<tr>
+<th><code>Function name</code></th>
+<th><code>INF PCD Section Name</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PcdGetx()/PcdSetx()</td>
+<td>Common get/set function for all PCDs type</td>
+</tr>
+<tr>
+<td>FeaturePcdGet()/FeaturePcdSet()</td>
+<td>Get/set function for &quot;FeaturePcd&quot;</td>
+</tr>
+<tr>
+<td>FixedPcdGetx()</td>
+<td>Get function for &quot;FixedPcd&quot;</td>
+</tr>
+<tr>
+<td>PatchPcdGetx()/PatchPcdSetx</td>
+<td>Get/Set function for &quot;PatchPcd&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>For example, the PcdGet32 macro is used to obtain the 32-bit value for all
+types of PCDs:</p>
+<pre><code class="lang-c">//
+// Check driver debug mask value and global mask
+//
+if ((ErrorLevel &amp;PcdGet32 (PcdDebugPrintErrorLevel)) == 0)
+{
+  return;
+}
+</code></pre>
+<h3 id="327-referencing-a-protocol-ppi-or-guid">3.2.7 Referencing a Protocol, PPI, or GUID</h3>
+<p>A Protocol, PPI, or a Guid is a UEFI architecture interface item and abstract
+firmware component&apos;s interface. This section introduces how to reference one of
+these interfaces from a module.</p>
+<h4 id="3271-adding-protocol-ppi-or-guid-to-inf-file">3.2.7.1 Adding Protocol, PPI, or GUID to INF file</h4>
+<p>The name of Protocol, PPI, or GUID must be added into the corresponding section
+in the module INF file: [Protocol], [Ppi], and [Guid]. For example:</p>
+<p><code>[Protocol] gEfiSampleProtocol</code></p>
+<h4 id="3272-including-the-header-file-in-source-code">3.2.7.2 Including the header file in source code</h4>
+<p>The Protocol, PPI, or GUID header file may define related structures. Use the
+following procedure to find the header file path:</p>
+<ul>
+<li><p>The header file for a Ppi is in <code>&lt;PackagePath&gt;</code>\Include\Ppi.</p>
+</li>
+<li><p>The header file for a Protocol is in <code>&lt;PackagePath&gt;</code>\Include\Protocol.</p>
+</li>
+<li><p>The header file for a Guid is in <code>&lt;PackagePath&gt;</code>\Include\Guid.</p>
+</li>
+</ul>
+<p>Header files must be explicitly included in the module source code. For example:</p>
+<pre><code>#include &lt;Protocol/DeviceIo.h&gt;
+#include &lt;Ppi/Reset.h&gt;
+#include &lt;Guid/GlobalVariable.h&gt;
+</code></pre><h3 id="328-adding-a-dependency-to-a-module">3.2.8 Adding a Dependency to a Module</h3>
+<p>The dependency expression gives the conditions for executing or dispatching a
+driver&apos;s entry point. This helps determine the dispatch order for PEIM and DXE
+modules.</p>
+<p>An expression consists of one or more Protocol, PPI, or GUID with operators
+such as &quot;AND&quot;, &quot;OR&quot;, &quot;TRUE&quot;, &quot;FALSE&quot;, &quot;NOT&quot; etc.</p>
+<p>The <em>Platform Initialization Specification</em> gives detailed syntax for PEIM&apos;s
+dependency expression in the &quot;Dependency Expressions&quot; chapter, and details for
+the DXE module&apos;s dependency expression in the &quot;Dependency Expression Grammar&quot;
+chapter.</p>
+<p>The expression should be put in the INF&apos;s depex section as follows:</p>
+<pre><code>[depex]
+
+gEfiSampleGuid AND gEfiSamplePpiGuid
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="31_what_is_an_edk_ii_module.html#31-what-is-an-edk-ii-module" class="navigation navigation-prev " aria-label="Previous page: 3.1 What is an EDK II module?">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="33_additional_steps_for_library_instances.html#33-additional-steps-for-library-instances" class="navigation navigation-next " aria-label="Next page: 3.3 Additional Steps for Library Instances">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.2 Creating a Module","level":"1.6.2","depth":2,"next":{"title":"3.3 Additional Steps for Library Instances","level":"1.6.3","depth":2,"anchor":"#33-additional-steps-for-library-instances","path":"3_module_development/33_additional_steps_for_library_instances.md","ref":"3_module_development/33_additional_steps_for_library_instances.md#33-additional-steps-for-library-instances","articles":[]},"previous":{"title":"3.1 What is an EDK II module?","level":"1.6.1","depth":2,"anchor":"#31-what-is-an-edk-ii-module","path":"3_module_development/31_what_is_an_edk_ii_module.md","ref":"3_module_development/31_what_is_an_edk_ii_module.md#31-what-is-an-edk-ii-module","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Module Writer's Guide","version":"Revision 0.71"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3_module_development/32_creating_a_module.md","mtime":"2020-12-01T06:45:16.863Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:45:47.023Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
