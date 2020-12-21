@@ -39,14 +39,9 @@ Its prototype is list below:
 ```
 EFI_STATUS
 EFIAPI
-UefiMain (
+UefiMain (IN EFI_HANDLE ImageHandle, 
+          IN EFI_SYSTEM_TABLE *SystemTable);
 ```
-
-`IN EFI_HANDLE` _ImageHandle_`,`
-
-`IN EFI_SYSTEM_TABLE `*_SystemTable_
-
-`);`
 
 As can be seen, there are two parameters for UEFI application entry point,
 
@@ -54,8 +49,7 @@ As can be seen, there are two parameters for UEFI application entry point,
 the UEFI application. `SystemTable` is the pointer to the EFI System Table.
 
 The following is a full UEFI_APPLICATION example located at
-
-$WORKSPACE\MdeModulePkg\Application\HelloWorld. It shows how to print a "UEFI
+`$WORKSPACE\MdeModulePkg\Application\HelloWorld`. It shows how to print a "UEFI
 Hello World!" string to console.
 
 **********
