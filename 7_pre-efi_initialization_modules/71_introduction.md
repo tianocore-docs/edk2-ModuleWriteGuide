@@ -37,6 +37,6 @@ requirements of the subsequence phase.
 The PEI Foundation establishes the PEI Services Table that is usable by all
 PEIMs.
 
-The PEI phase allows C-codes PEIMs to be executed prior to the availability of
+The PEI phase allows C-coded PEIMs to be executed prior to the availability of
 main memory. This is accomplished via configuring the on-CPU resources, such as
 the CPU data cache to be used as a memory call stack.
