@@ -51,16 +51,14 @@ ENTRY_POINT = SampleDriverEntryPoint
 ```
 **********
 **Note:** If DXE module dependent on the new definitions/features in
-**********
-
-_DXE_SERVICES_TABLE-defined in PI specifications from version 1.2 forward- the
+DXE_SERVICES_TABLE defined in PI specifications from version 1.2 forward, the
 hex version 0x0001000A needs to be given in INF file [Defines] section's
-PI_SPECFIICATION_VERSION field._
+PI_SPECFIICATION_VERSION field.
+**********
 
 **********
 **Note:** If module dependent on the new definitions/features in
+EFI_BOOT_SERVICES/UEFI_RUNTIME_SERVICES defined in UEFI specifications from
+version 2.1 forward, the hex version need to be given in INF file [Defines]
+section's UEFI_SPECFIICATION_VERSION field.
 **********
-
-_EFI_BOOT_SERVICES/UEFI_RUNTIME_SERVICES- defined in UEFI specifications from
-version 2.1 forward-the hex version need to be given in INF file [Defines]
-section's UEFI_SPECFIICATION_VERSION field._
