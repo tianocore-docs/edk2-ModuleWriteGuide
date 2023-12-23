@@ -49,9 +49,10 @@ depends on all dxe architectural protocols. To force this, the UEFI driver
 entry point library instance appends all dxe architectural protocol dependency
 relationships into the depex section of the module image.
 **********
-**Note:** If module dependent on the new definitions/features in
-**********
 
-_EFI_BOOT_SERVICES/UEFI_RUNTIME_SERVICES-defined in UEFI specifications from
-version 2.1 forward-the hex version need to be given in INF file [Defines]
-section's UEFI_SPECFIICATION_VERSION field._
+**********
+**Note:** If module dependent on the new definitions/features in
+EFI_BOOT_SERVICES/UEFI_RUNTIME_SERVICES defined in UEFI specifications from
+version 2.1 forward, the hex version need to be given in INF file [Defines]
+section's UEFI_SPECFIICATION_VERSION field.
+**********
