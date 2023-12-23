@@ -58,13 +58,13 @@ UEFI_APPLICATON has no dependency relationship section.
 [protocol]
   gSampleProtocolGuid
 
-[Guids] gSampleGuid
+[Guids]
+  gSampleGuid
 ```
 
 **********
 **Note:** If a module is dependent on the new definitions or features in
+EFI_BOOT_SERVICES or UEFI_RUNTIME_SERVICES defined in UEFI specifications from
+version 2.1 forward, the hex version needs to be given in INF file [Defines]
+section's UEFI_SPECFIICATION_VERSION field.
 **********
-
-_EFI_BOOT_SERVICES or UEFI_RUNTIME_SERVICES-defined in UEFI specifications from
-version 2.1 forward-the hex version needs to be given in INF file [Defines]
-section's UEFI_SPECFIICATION_VERSION field._
