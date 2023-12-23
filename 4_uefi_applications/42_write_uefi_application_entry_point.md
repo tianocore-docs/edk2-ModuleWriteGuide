@@ -40,13 +40,10 @@ Its prototype is list below:
 EFI_STATUS
 EFIAPI
 UefiMain (
+ IN EFI_HANDLE _ImageHandle_,
+ IN EFI_SYSTEM_TABLE *_SystemTable_
+ );
 ```
-
-`IN EFI_HANDLE` _ImageHandle_`,`
-
-`IN EFI_SYSTEM_TABLE `*_SystemTable_
-
-`);`
 
 As can be seen, there are two parameters for UEFI application entry point,
 
@@ -61,9 +58,8 @@ Hello World!" string to console.
 **********
 **Note:** This application uses several pcds to demonstrate the usage of PCD.
 Readers can obtain the default value of these pcds from the
+_$WORKSPACE\MdeModulePkg\MdeModulePkg.dec_ file.
 **********
-
-_$WORKSPACE\MdeModulePkg\MdeModulePkg.dec file._
 
 ```c
 EFI_STATUS
