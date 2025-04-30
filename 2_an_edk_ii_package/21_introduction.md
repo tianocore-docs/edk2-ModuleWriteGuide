@@ -92,22 +92,22 @@ source files from another module directory.
 
 * Include Public header files
 
-    * Protocol\ Public Protocol header files o Ppi\ Public PPI header files o
-      Guid\ Public GUID header files
-
-    * IndustryStandard\ Public Industry Standard header files o Library\ Public
-      Library class header files
+    * Protocol\ Public Protocol header files
+    * Ppi\ Public PPI header files
+    * Guid\ Public GUID header files
+    * IndustryStandard\ Public Industry Standard header files
+    * Library\ Public Library class header files
 
 * Library\ Libraries instances
 
-    * NameOneLib\ Library instance NameOne source files and INF o NameTwoLib\
-      Library instance NameTwo source files and INF
+    * NameOneLib\ Library instance NameOne source files and INF
+    * NameTwoLib\ Library instance NameTwo source files and INF
 
-* Application\ Uefi Applications o NameOneApp\ Application NameOne source files
-  and INF o NameTwoApp\ Application NameTwo source files and INF  NameOneDxe\
-  Dxe Driver NameOne source files and INF.
-
-* NameTwoPei\ Pei Driver NameTwo source files and INF.
+* Application\ Uefi Applications
+    * NameOneApp\ Application NameOne source files and INF
+    * NameTwoApp\ Application NameTwo source files and INF
+    * NameOneDxe\ Dxe Driver NameOne source files and INF.
+    * NameTwoPei\ Pei Driver NameTwo source files and INF.
 
 If no related source files exist in a package, the corresponding directory may
 not be created. For example, if no application is provided in a package, a
